@@ -1,0 +1,30 @@
+# Project: Project1
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = subhajit_sahu_29812.o $(RES)
+LINKOBJ  = subhajit_sahu_29812.o $(RES)
+LIBS =  -L"C:/Program_Files/Dev-Cpp/lib"  
+INCS =  -I"C:/Program_Files/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Program_Files/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Program_Files/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Program_Files/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Program_Files/Dev-Cpp/include/c++/3.4.2"  -I"C:/Program_Files/Dev-Cpp/include" 
+BIN  = Project0.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Project0.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Project0.exe" $(LIBS)
+
+subhajit_sahu_29812.o: subhajit_sahu_29812.cpp
+	$(CPP) -c subhajit_sahu_29812.cpp -o subhajit_sahu_29812.o $(CXXFLAGS)
